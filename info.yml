@@ -1,13 +1,13 @@
 # Info for the schoreboard
 service_name: "babyheap"
-description: "Yet Another Heap Challenge"
+description: "Yet Another Babyheap"
 tags:
   - pwn
 violates_flag_format: false # if this is not "true", the flag is verfied against the flag format
 
 allow_egress: False
 
-flag: "OOO{pr0f35510n4l_r54_br34k3r}"
+flag: "OOO{a_babyheap_has_no_name}"
 
 # Type can be normal or king_of_the_hill
 type: normal
@@ -25,7 +25,7 @@ authors:
 
 # These are the files that will be "public" to the teams via the scoreboard.
 public_files:
-  - service/src/service
+  - service/src/easy_heap
   - service/src/libc.so
 
 # Test scripts are heavily encouraged.
