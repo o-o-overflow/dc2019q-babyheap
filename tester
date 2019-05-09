@@ -73,11 +73,12 @@ def test_service(ip_address, port):
 	_LOG.info("Testing container...")
 
 	_LOG.info("launching interaction container")
+	_LOG.info("running command docker run --rm -i -d %s" % interaction_image_tag)
 	interaction_container = subprocess.check_output("docker run --rm -i -d %s" % interaction_image_tag, shell=True).strip().decode('utf-8')
 
 	def _run_interaction(script):
 		_LOG.info("launching %s", script)
-
+		_LOG.info("docker exec %s %s %s %s" % (interaction_container, script, ip_address, port))
 		output = subprocess.check_output("docker exec %s %s %s %s" % (interaction_container, script, ip_address, port), shell=True)
 		if os.path.basename(script).startswith("exploit"):
 			_LOG.info("... checking for the flag")
