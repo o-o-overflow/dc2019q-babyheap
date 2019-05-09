@@ -3,6 +3,8 @@
 #include<unistd.h>
 #include<string.h>
 #define SIZE 10
+#define MAXIMUM_LEN 35
+#define NUM_MSG 6
 #define CYA -1
 #define CANNOT_TELL -2
 #define MALLOC_ERROR -3
@@ -13,15 +15,6 @@ typedef struct {
 	unsigned int size;
 } item;
 item items[SIZE];
-void main_menu() {
-	puts("-----Yet Another Babyheap!-----");
-	puts("[M]alloc ");
-	puts("[F]ree ");
-	puts("[S]how ");
-	puts("[E]xit ");
-	puts("------------------------");
-	printf("Command:\n> ");
-}
 int get_atoi() {
 	char buf[4]="";
 	read(0,buf,4);	
@@ -96,11 +89,22 @@ int is_valid(int value) {
 	else return 0;
 }
 
-int loop() {
+int start() {
 	int value = CYA;
 	char command[2] = "";
+	char msg[NUM_MSG][MAXIMUM_LEN] = {
+		"-----Yet Another Babyheap!-----",
+		"[M]alloc ",
+		"[F]ree ",
+		"[S]how ",
+		"[E]xit ",
+		"------------------------",
+	};
+	int i;
 	while(1) {
-		main_menu();
+		for (i = 0; i < NUM_MSG; i++)
+			puts(msg[i]);
+		printf("Command:\n> ");
 	        read(0,&command,2);	
 		switch(command[0]) {
 			case 'M':
@@ -130,6 +134,6 @@ int main(void) {
         setvbuf(stdin,0LL,1,0LL);
         setvbuf(stderr, 0LL, 2, 0LL);
 	// TODO: proof of work?
-	loop();
+	start();
 	return 0;
 }
