@@ -3,7 +3,7 @@ run echo "travis_fold:start:Dapt\033[33;1mservice Dockerfile apt\033[0m" && \
     apt-get update && apt-get install -y python xinetd libssl-dev netcat && \
     echo "\ntravis_fold:end:Dapt\r"
 
-copy src/easy_heap /easy_heap
+copy src/babyheap /babyheap
 copy service.conf /service.conf
 copy src/wrapper /wrapper
 

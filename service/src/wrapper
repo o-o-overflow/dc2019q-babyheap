@@ -1,4 +1,4 @@
 #!/bin/sh
 
 exec 2>/dev/null
-timeout --foreground 1500 stdbuf -i0 -o0 -e0 /easy_heap
+timeout --foreground 1500 stdbuf -i0 -o0 -e0 /babyheap
