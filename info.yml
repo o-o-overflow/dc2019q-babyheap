@@ -1,6 +1,6 @@
 # Info for the schoreboard
 service_name: "babyheap"
-description: "Yet Another Babyheap"
+description: "Yet another babyheap."
 tags:
   - pwn
 violates_flag_format: false # if this is not "true", the flag is verfied against the flag format
