@@ -7,7 +7,7 @@ violates_flag_format: false # if this is not "true", the flag is verfied against
 
 allow_egress: False
 
-flag: "OOO{a_babyheap_has_no_name}"
+flag: "OOO{4_b4byh34p_h45_nOOO_n4m3}"
 
 # Type can be normal or king_of_the_hill
 type: normal

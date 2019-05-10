@@ -8,7 +8,7 @@ copy service.conf /service.conf
 copy banner_fail /
 copy src/wrapper /wrapper
 
-run touch /flag && chmod 644 /flag && echo "OOO{a_babyheap_has_no_name}" > /flag
+run touch /flag && chmod 644 /flag && echo "OOO{4_b4byh34p_h45_nOOO_n4m3}" > /flag
 
 expose 5000
 cmd ["/usr/sbin/xinetd", "-filelog", "log", "-dontfork", "-f", "/service.conf"]
