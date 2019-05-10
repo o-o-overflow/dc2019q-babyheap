@@ -19,6 +19,11 @@ concurrent_connections: 16
 authors:
   - tiffanyb
 
+game_network_info:
+  host: babyheap.quals2019.oooverflow.io
+  port: 5000
+
+
 #
 # Directories below the next two are absolute in either the `service` or `interaction` docker container.
 #
