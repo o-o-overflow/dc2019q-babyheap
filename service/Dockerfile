@@ -5,6 +5,7 @@ run echo "travis_fold:start:Dapt\033[33;1mservice Dockerfile apt\033[0m" && \
 
 copy src/babyheap /babyheap
 copy service.conf /service.conf
+copy banner_fail /
 copy src/wrapper /wrapper
 
 run touch /flag && chmod 644 /flag && echo "OOO{a_babyheap_has_no_name}" > /flag
